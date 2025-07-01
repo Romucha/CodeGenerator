@@ -1,0 +1,16 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<!--Main colors-->
+	<SolidColorBrush x:Key="MainBackground" Color="#fffff0" />
+	<SolidColorBrush x:Key="MainForeground" Color="#3C3D3D" />
+	
+	<!--Button colors-->
+	<SolidColorBrush x:Key="ButtonBackground" Color="#ffcf94" />
+	<SolidColorBrush x:Key="ButtonForeground" Color="#bd7f2a" />
+	<SolidColorBrush x:Key="ButtonBackgroundFocus" Color="#42280e" />
+	<SolidColorBrush x:Key="ButtonForegroundFocus" Color="#ffcf94" />
+	
+	<!--Grid splitter colors-->
+	<SolidColorBrush x:Key="GridSplitterBackground" Color="#ffcf94" />
+	
+</ResourceDictionary>

@@ -5,7 +5,9 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="CodeGenerator.Views.ToolbarView">
 	<WrapPanel Orientation="Horizontal">
-		<Button Content="Start" />
+		<Button>
+			<Image Source="avares://CodeGenerator/Assets/Images/Buttons/start.png" MaxWidth="50" MaxHeight="50" />
+		</Button>
 		<Button Content="Open" />
 		<Button Content="New" />
 	</WrapPanel>

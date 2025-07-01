@@ -2,9 +2,13 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 	<Styles.Resources>
 		<ResourceDictionary>
-			<ResourceDictionary.MergedDictionaries>
-				<ResourceInclude Source="avares://CodeGenerator/Styles/AppColors.axaml" />
-			</ResourceDictionary.MergedDictionaries>
+			<ResourceDictionary.ThemeDictionaries>
+				<ResourceDictionary x:Key="Default">
+					<ResourceDictionary.MergedDictionaries>
+						<ResourceInclude Source="avares://CodeGenerator/Styles/AppColorsDefault.axaml" />						
+					</ResourceDictionary.MergedDictionaries>
+				</ResourceDictionary>
+			</ResourceDictionary.ThemeDictionaries>
 		</ResourceDictionary>
 	</Styles.Resources>
   <Design.PreviewWith>
@@ -12,16 +16,36 @@
       <!-- Add Controls for Previewer Here -->
     </Border>
   </Design.PreviewWith>
-
-	<Style Selector="UserControl">
+	
+	<Style Selector="Window">
 		<Setter Property="Background" Value="{StaticResource MainBackground}"/>
 	</Style>
 	<Style Selector="Button">
 		<Setter Property="Margin" Value="5"/>
-		<Setter Property="Background" Value="DarkGray" />
-		<Setter Property="Foreground" Value="WhiteSmoke" />
+		<Setter Property="Background" Value="{StaticResource ButtonBackground}" />
+		<Setter Property="Foreground" Value="{StaticResource ButtonForeground}" />
+		<Setter Property="Template">
+			<ControlTemplate>
+				<ContentPresenter x:Name="PART_ContentPresenter"
+                    Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    CornerRadius="{TemplateBinding CornerRadius}"
+                    Content="{TemplateBinding Content}"
+                    ContentTemplate="{TemplateBinding ContentTemplate}"
+                    Padding="{TemplateBinding Padding}"
+                    RecognizesAccessKey="True"
+                    HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                    VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" />
+			</ControlTemplate>
+		</Setter>
+	</Style>
+	<Style Selector="Button:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+		<Setter Property="Background" Value="{StaticResource ButtonBackgroundFocus}" />
+		<Setter Property="Foreground" Value="{StaticResource ButtonForegroundFocus}" />
 	</Style>
 	<Style Selector="GridSplitter">
-		<Setter Property="Background" Value="LightGray" />
+		<Setter Property="Background" Value="{StaticResource GridSplitterBackground}" />
+		<Setter Property="Width" Value="1" />
 	</Style>
 </Styles>
