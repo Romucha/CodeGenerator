@@ -13,5 +13,6 @@
 		<Grid.RowDefinitions>
 			<RowDefinition Height="*"/>
 		</Grid.RowDefinitions>
+		<TextBlock>Display</TextBlock>
 	</Grid>
 </UserControl>

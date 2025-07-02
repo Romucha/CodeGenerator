@@ -21,6 +21,7 @@
 		</Grid.RowDefinitions>
 		<local:MenuBarView Grid.Row="0" />
 		<local:ToolbarView Grid.Row="1" />
+		<local:SettingsView Grid.Row="2" />
 		<local:DisplayView Grid.Row="2" />
 		<local:StatusBarView Grid.Row="3" />
 	</Grid>
