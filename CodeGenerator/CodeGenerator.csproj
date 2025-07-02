@@ -27,4 +27,8 @@
       <DependentUpon>ToolbarView.axaml</DependentUpon>
     </Compile>
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Assets\Images\Buttons\" />
+  </ItemGroup>
 </Project>

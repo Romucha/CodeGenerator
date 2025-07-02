@@ -18,12 +18,19 @@
   </Design.PreviewWith>
 	
 	<Style Selector="Window">
-		<Setter Property="Background" Value="{StaticResource MainBackground}"/>
+		<Setter Property="Background" Value="{StaticResource Main}"/>
 	</Style>
 	<Style Selector="Button">
-		<Setter Property="Margin" Value="5"/>
-		<Setter Property="Background" Value="{StaticResource ButtonBackground}" />
-		<Setter Property="Foreground" Value="{StaticResource ButtonForeground}" />
+		<Setter Property="Margin" Value="5" />
+		<Setter Property="Padding" Value="5" />
+		<Setter Property="HorizontalAlignment" Value="Left"/>
+		<Setter Property="VerticalAlignment" Value="Top"/>
+		<Setter Property="HorizontalContentAlignment" Value="Center"/>
+		<Setter Property="VerticalContentAlignment" Value="Top"/>
+		<Setter Property="MinHeight" Value="25" />
+		<Setter Property="MinWidth" Value="50" />
+		<Setter Property="Background" Value="{StaticResource Accent}" />
+		<Setter Property="Foreground" Value="{StaticResource Secondary}" />
 		<Setter Property="Template">
 			<ControlTemplate>
 				<ContentPresenter x:Name="PART_ContentPresenter"
@@ -41,11 +48,12 @@
 		</Setter>
 	</Style>
 	<Style Selector="Button:pointerover /template/ ContentPresenter#PART_ContentPresenter">
-		<Setter Property="Background" Value="{StaticResource ButtonBackgroundFocus}" />
-		<Setter Property="Foreground" Value="{StaticResource ButtonForegroundFocus}" />
+		<Setter Property="Background" Value="{StaticResource Accent}" />
+		<Setter Property="Foreground" Value="{StaticResource Secondary}" />
 	</Style>
 	<Style Selector="GridSplitter">
-		<Setter Property="Background" Value="{StaticResource GridSplitterBackground}" />
+		<Setter Property="Background" Value="{StaticResource Accent}" />
 		<Setter Property="Width" Value="1" />
+		<Setter Property="CornerRadius" Value="3" />
 	</Style>
 </Styles>
