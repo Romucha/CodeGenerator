@@ -17,6 +17,7 @@
 
     <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
     <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="$(AvaloniaVersion)" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.6" />
   </ItemGroup>
 
   <ItemGroup>
@@ -30,6 +31,5 @@
 
   <ItemGroup>
     <Folder Include="Assets\Images\Buttons\" />
-    <Folder Include="Converters\" />
   </ItemGroup>
 </Project>

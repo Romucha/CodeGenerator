@@ -2,5 +2,15 @@
 
 public partial class MainViewModel : ViewModelBase
 {
-    public string Greeting => "Welcome to Avalonia!";
+    private ActivePanel activePanel;
+    public ActivePanel ActivePanel
+    {
+        get => activePanel;
+        set => SetProperty(ref activePanel, value);
+    }
+
+    public MainViewModel()
+    {
+        ActivePanel = ActivePanel.Display;
+    }
 }

@@ -8,8 +8,6 @@
              x:Class="CodeGenerator.Views.MainView"
              x:DataType="vm:MainViewModel">
   <Design.DataContext>
-    <!-- This only sets the DataContext for the previewer in an IDE,
-         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
     <vm:MainViewModel />
   </Design.DataContext>
 	<Grid>
@@ -21,8 +19,8 @@
 		</Grid.RowDefinitions>
 		<local:MenuBarView Grid.Row="0" />
 		<local:ToolbarView Grid.Row="1" />
-		<local:SettingsView Grid.Row="2" />
-		<local:DisplayView Grid.Row="2" />
+		<local:SettingsView Grid.Row="2" IsVisible="{Binding ActivePanel, Converter={StaticResource ActivePanelConverter}, ConverterParameter=Settings}" />
+		<local:DisplayView Grid.Row="2" IsVisible="{Binding ActivePanel, Converter={StaticResource ActivePanelConverter}, ConverterParameter=Display}" />
 		<local:StatusBarView Grid.Row="3" />
 	</Grid>
 </UserControl>

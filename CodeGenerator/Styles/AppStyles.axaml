@@ -5,7 +5,8 @@
 			<ResourceDictionary.ThemeDictionaries>
 				<ResourceDictionary x:Key="Default">
 					<ResourceDictionary.MergedDictionaries>
-						<ResourceInclude Source="avares://CodeGenerator/Styles/AppColorsDefault.axaml" />						
+						<ResourceInclude Source="avares://CodeGenerator/Styles/AppColorsDefault.axaml" />
+						<ResourceInclude Source="avares://CodeGenerator/Styles/AppConverters.axaml" />						
 					</ResourceDictionary.MergedDictionaries>
 				</ResourceDictionary>
 			</ResourceDictionary.ThemeDictionaries>
